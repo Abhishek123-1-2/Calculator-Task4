@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -200px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.calculator-container {
+    background-image: url("img/calculator.png");
+    background-repeat: no-repeat;
+    height: 984px;
+    width: 492px;
+    transform: scale(0.57, 0.57);
+}
+
+.grid {
+    margin-left: 43px;
+    margin-top: 374px;
+    color: black;
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px 90px 90px 90px;
+    grid-gap: 12px;
+}
+
+.data-input {
+    background-color: black;
+    width: 418px;
+    height: 100px;
+    position: absolute;
+    top: 249px;
+    left: 35px;
+    font-size: 90px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#number-0 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: 200px;
+}
+
+.number, .arithmetic-operator {
+    font-size: 90px;
+}
+
+.assignment-operator {
+    font-size: 120px;
+}
+
+/* .grid div:hover {
+    background-color: ;
+    /* color: ;
+} */
+
+.arithmetic-operator {
+    background-color: rgb(62, 52, 35);
+}
+
+.assignment-operator {
+    background-color: rgb(228, 110, 20);
+    color:white;
+    font-size: 30px;
+}
+
+.number {
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.number, .assignment-operator, .arithmetic-operator:hover {
+    cursor: pointer;
+}
+
+.arithmetic-operator:active {
+    background-color: white;
+    color: rgba(254, 159, 11, 1);
+}
+
+.assignment-operator:active {
+    background-color:white;
+}
+
+.number:active {
+    background-color: silver;
+}
